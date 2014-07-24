@@ -1,3 +1,6 @@
 Credit to Jim Driscoll(https://github.com/jj101k) whose code was ported to create this Gem.
 
-In this statement http://csrc.nist.gov/archive/aes/rijndael/rijndael-ip.pdf made by creator of Rijndael algorithm clearly mentions practise of algorithm, reference implementation, and mathematically optimised implementations are covered by no foreign and/or US patents. Hence, it is fully free to use.
+In this statement http://csrc.nist.gov/archive/aes/rijndael/rijndael-ip.pdf made by creator of Rijndael algorithm,
+clearly mentions practise of algorithm, reference implementation, 
+and mathematically optimised implementations are covered by no foreign and/or US patents. 
+Hence, it is fully free to use.
