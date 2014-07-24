@@ -28,7 +28,7 @@ Mode needs to be supplied when instantiating Encrypted::Ciph. Mode consists of d
 
 ### Encryption
 ```ruby
-    encrypt_this = "This is some seriously confidential message."
+    encrypt_this = "This is seriously confidential message."
     cipher = Encrypted::Ciph.new("256-256")
     key = "xvxvxvxxvxvxvxvxvxvxvxvxvxvxvxvx" # 256 bits / 8 = 32 bytes
     iv = "nmnmnmnmnmnmnmnmnmnmjkjkhjhjhjgh"  # 256 bits / 8 = 32 bytes
@@ -49,7 +49,7 @@ Mode needs to be supplied when instantiating Encrypted::Ciph. Mode consists of d
 ### Key and IV generation helper
 To automatically generate and assign right size of random key and iv bytes while encrypting. 
 ```ruby
-    encrypt_this = "This is some seriously confidential message. Let me generate stuff for ya."
+    encrypt_this = "This is seriously confidential message. Let me generate stuff for ya."
     cipher = Encrypted::Ciph.new("256-128")
     key = cipher.generate_key                    # Sets and returns 32 bytes long string
     iv = cipher.generate_iv                      # Sets and returns 16 bytes long string
