@@ -1,6 +1,6 @@
 # Encrypted
 
-Encryption and Decryption with Rijndael algorithm and CBC.
+Encryption and Decryption with Rijndael algorithm and CBC for Rails.
 
 Key size options: 128, 192 and 254 bits
 Block size options: 128, 192 and 254 bits
