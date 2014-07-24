@@ -1,6 +1,10 @@
 # Encrypted
 
-TODO: Write a gem description
+Encryption and Decryption with Rijndael algorithm and CBC.
+
+Key size options: 128, 192 and 254 bits
+Block size options: 128, 192 and 254 bits
+
 
 ## Installation
 
@@ -19,8 +23,39 @@ Or install it yourself as:
     $ gem install encrypted
 
 ## Usage
+Mode needs to be supplied when instantiating Encrypted::Ciph. Mode consists of desirable key length and block length in "keysize-blocksize" format.
+"256-128" implies key size of 256 bits and block size of 128 bits.
 
-TODO: Write usage instructions here
+### Encryption
+```ruby
+    encrypt_this = "This is some seriously confidential message."
+    cipher = Encrypted::Ciph.new("256-256")
+    key = "xvxvxvxxvxvxvxvxvxvxvxvxvxvxvxvx" # 256 bits / 8 = 32 bytes
+    iv = "nmnmnmnmnmnmnmnmnmnmjkjkhjhjhjgh"  # 256 bits / 8 = 32 bytes
+    cipher.key = key
+    cipher.iv = iv
+    encrypted_text = cipher.encrypt(encrypt_this)
+```
+### Decrypting
+```ruby
+    decrypt_this = encrypted_text               #from above
+    decipher = Encrypted::Ciph.new("256-256")
+    cipher.key = "xvxvxvxxvxvxvxvxvxvxvxvxvxvxvxvx"     #key used above to encrypt
+    cipher.iv = "nmnmnmnmnmnmnmnmnmnmjkjkhjhjhjgh"      #initialization vector used above
+    decrypted_text = cipher.decrypt(decrypt_this)
+```
+    "decrypted_text => 'This is some seriously confidential message.'"
+
+### ey and IV generation helper
+To automatically generate and assign right size of random key and iv bytes while encrypting. 
+```ruby
+    encrypt_this = "This is some seriously confidential message. Let me generate stuff for ya."
+    cipher = Encrypted::Ciph.new("256-128")
+    key = cipher.generate_key                   
+    iv = cipher.generate_iv                     
+    encrypted_text = cipher.encrypt(encrypt_this)
+    
+```   
 
 ## Contributing
 
