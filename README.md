@@ -51,8 +51,8 @@ To automatically generate and assign right size of random key and iv bytes while
 ```ruby
     encrypt_this = "This is some seriously confidential message. Let me generate stuff for ya."
     cipher = Encrypted::Ciph.new("256-128")
-    key = cipher.generate_key                   
-    iv = cipher.generate_iv                     
+    key = cipher.generate_key                    # Sets and returns 32 bytes long string
+    iv = cipher.generate_iv                      # Sets and returns 16 bytes long string
     encrypted_text = cipher.encrypt(encrypt_this)
     
 ```   
