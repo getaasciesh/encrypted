@@ -1,6 +1,6 @@
 # Encrypted
 
-Encryption and Decryption with Rijndael algorithm and CBC for Rails.
+Ruby on Rails gem for encryption and decryption with Rijndael algorithm and CBC.
 
 Key size options: 128, 192 and 254 bits
 Block size options: 128, 192 and 254 bits
