@@ -36,7 +36,7 @@ Mode needs to be supplied when instantiating Encrypted::Ciph. Mode consists of d
     cipher.iv = iv
     encrypted_text = cipher.encrypt(encrypt_this)
 ```
-### Decrypting
+### Decryption
 ```ruby
     decrypt_this = encrypted_text               #from above
     decipher = Encrypted::Ciph.new("256-256")
@@ -46,7 +46,7 @@ Mode needs to be supplied when instantiating Encrypted::Ciph. Mode consists of d
 ```
     "decrypted_text => 'This is some seriously confidential message.'"
 
-### ey and IV generation helper
+### Key and IV generation helper
 To automatically generate and assign right size of random key and iv bytes while encrypting. 
 ```ruby
     encrypt_this = "This is some seriously confidential message. Let me generate stuff for ya."
