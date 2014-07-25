@@ -5,6 +5,8 @@ Ruby on Rails gem for encryption and decryption with Rijndael algorithm and CBC.
 Key size options: 128, 192 and 256 bits
 Block size options: 128, 192 and 256 bits
 
+AES is version of Rijndael with 128 bits block size. Hence, to encrypt/decrypt with AES standard choose any key size but 128 bits block size.
+
 
 ## Installation
 
